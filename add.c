@@ -17,6 +17,8 @@ int row = sizeof(firstMatrix) / sizeof(firstMatrix[0]);
 int column = sizeof(firstMatrix[0]) / (row);
 
 double result[row][column];
+result = (double*) malloc (sizeof(double) * row * column);
+
 
 for (int i = 0; i < sizeFirst; i++){
     for (int j = 0; j < sizeSecond; j++){
