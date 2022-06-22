@@ -7,6 +7,8 @@
 // Both arrays must be of the same dimensions.
 
 #include <stdlib.h>
+#include <stdio.h>
+
 
 
 Matrix_t mat_add (Matrix_t mat1, Matrix_t mat2){
