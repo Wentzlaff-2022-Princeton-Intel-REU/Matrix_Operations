@@ -9,5 +9,5 @@ number of rows (m), and the number of columns(n)*/
 typedef struct Matrix {
     int m;
     int n;
-    double[][] elements;
+    double* elements;
 } Matrix_t

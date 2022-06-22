@@ -9,12 +9,17 @@
 #include <stdlib.h>
 
 
-double[][] addMatrices (double[][] firstMatrix, double[][] secondMatrix){
+Matrix_t mat_add (Matrix_t mat1, Matrix_t mat2){
 
 
 
-int row = sizeof(firstMatrix) / sizeof(firstMatrix[0]);
-int column = sizeof(firstMatrix[0]) / (row);
+int row = mat1.m;
+int column = mat1.n;
+
+
+Matrix_t resultingMatrix;
+resultingMatrix.m = row;
+resultingMatrix.n = column;
 
 double result[row][column] = (double*) malloc (sizeof(double) * row * column);
 
