@@ -21,16 +21,20 @@ Matrix_t resultingMatrix;
 resultingMatrix.m = row;
 resultingMatrix.n = column;
 
-double result[row][column] = (double*) malloc (sizeof(double) * row * column);
+resultingMatrix.elements  = (double*) malloc (sizeof(double) * row * column);
 
 
-for (int i = 0; i < sizeFirst; i++){
-    for (int j = 0; j < sizeSecond; j++){
-        result[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
+for (int i = 0; i < row; i++){
+    for (int j = 0; j < column; j++){
+
+// resultingMatrix.elements[i][j] = mat1.elements[i][j] + mat2.elements[i][j];
+
+        *(resultingMatrix.elements + i*column + j) = *(mat1.elements + i*column + j) + *(mat2.elements + i*column + j);
+
     }
 }
 
-return result;
+return resultingMatrix;
 }
 
 
