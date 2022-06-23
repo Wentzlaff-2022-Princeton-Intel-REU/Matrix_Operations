@@ -13,7 +13,7 @@ static void setArray(double* array, int row, int col) {
             char temp;
         for (int j = 0; j < col; j++) {
             scanf("%lf%c", &array[i * col + j], &temp);
-            if (temp != ' ') {
+            if (temp != ' ' && j < col) {
                 exit(2);
             }
         }
