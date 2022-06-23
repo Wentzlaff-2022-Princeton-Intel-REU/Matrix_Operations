@@ -13,7 +13,7 @@ static void setArray(double* array, int row, int col) {
             char temp;
         for (int j = 0; j < col; j++) {
             scanf("%lf%c", &array[i * col + j], &temp);
-            if (temp != ' ' && j < col) {
+            if (temp != ' ' && j < col - 1) {
                 exit(2);
             }
         }
@@ -30,8 +30,8 @@ void readMatrices(Matrix_t* matrix_A, Matrix_t* matrix_B, int m_A, int m_B, int 
         exit(2);
     }
 
-    setArray(&a, m_A, n_A);
-    setArray(&b, m_B, n_B);
+    setArray(a, m_A, n_A);
+    setArray(b, m_B, n_B);
 
     matrix_A->m = m_A;
     matrix_B->m = m_B;
