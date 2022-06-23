@@ -19,19 +19,19 @@ void readMatrices(Matrix_t matrix_A, Matrix_t matrix_B, int m_A, int m_B, int n_
     setArray(&a, m_A, n_A);
     setArray(&b, m_B, n_B);
 
-    matric_A.m = m;
-    matric_B.m = m;
-    matric_A.n = n;
-    matric_B.n = n;
-    matric_A.elements = a;
-    matric_B.elements = b;
+    matrix_A.m = m;
+    matrix_B.m = m;
+    matrix_A.n = n;
+    matrix_B.n = n;
+    matrix_A.elements = a;
+    matrix_B.elements = b;
 }
 
 static void setArray(double* arr, int row, int col) {
     for (int i = 0; i < row; i++) {
             char temp;
         for (int j = 0; j < col; j++) {
-            scanf("%d%c", &arr[i][j], &temp);
+            scanf("%lf%c", &arr[i][j], &temp);
             if (temp != ' ') {
                 exit(2);
             }
