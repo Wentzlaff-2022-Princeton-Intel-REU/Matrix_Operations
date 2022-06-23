@@ -30,7 +30,9 @@ void readMatrices(Matrix_t* matrix_A, Matrix_t* matrix_B, int m_A, int m_B, int 
         exit(2);
     }
 
+    printf("Enter elements for matrix A:\n");
     setArray(a, m_A, n_A);
+    printf("Enter elements for matrix B:\n");
     setArray(b, m_B, n_B);
 
     matrix_A->m = m_A;
