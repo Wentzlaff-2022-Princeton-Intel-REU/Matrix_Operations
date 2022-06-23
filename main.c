@@ -24,12 +24,19 @@ int main(int argc, char *argv[]) {
     int n_A = atoi(argv[2]);
     int m_B = atoi(argv[3]);
     int n_B = atoi(argv[4]);
-    bool option = atoi(argv[5]);
+    int option = atoi(argv[5]);
 
     Matrix_t matrix_A, matrix_B;
     readMatrices(&matrix_A, &matrix_B, m_A, m_B, n_A, n_B);
+    Matrix_t result;
     
-    Matrix_t result = (option && mat_add(matrix_A, matrix_B)) || (!option && mat_multiply(matrix_A, matrix_B));
+    if (option == 0) {
+        result = mat_add(matrix_A, matrix_B);
+    }
+    else {
+        result = mat_multiply(matrix_A, matrix_B);
+    }
+    
     printMatrix(result);
 
     return 0;

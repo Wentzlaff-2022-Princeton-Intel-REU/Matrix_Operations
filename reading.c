@@ -12,7 +12,7 @@ static void setArray(double* array, int row, int col) {
     for (int i = 0; i < row; i++) {
             char temp;
         for (int j = 0; j < col; j++) {
-            scanf("%lf%c", &array[i*column + j], &temp);
+            scanf("%lf%c", &array[i * col + j], &temp);
             if (temp != ' ') {
                 exit(2);
             }
