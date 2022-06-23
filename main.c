@@ -21,6 +21,6 @@ int main(int argc, char *argv[]) {
     Matrix_t matrix_A, matrix_B;
     readMatrices(&matrix_A, &matrix_B, m_A, m_B, n_A, n_B);
     
-    Matrix_t result = (option && mat_add) || (!option && mat_multiply);
+    Matrix_t result = (option && mat_add(matrix_A, matrix_B)) || (!option && mat_multiply(matrix_A, matrix_B));
     printMatrix(result);
 }

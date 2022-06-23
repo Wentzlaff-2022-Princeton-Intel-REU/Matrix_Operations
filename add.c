@@ -12,6 +12,10 @@
 /*--------------------------------------------------------------------*/
 
 Matrix_t mat_add (Matrix_t mat1, Matrix_t mat2){
+    if (mat1.m != mat2.m || mat1.n != mat2.n) {
+        exit(2);
+    }
+
     int row = mat1.m;
     int column = mat1.n;
 
