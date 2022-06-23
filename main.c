@@ -23,4 +23,6 @@ int main(int argc, char *argv[]) {
     
     Matrix_t result = (option && mat_add(matrix_A, matrix_B)) || (!option && mat_multiply(matrix_A, matrix_B));
     printMatrix(result);
+
+    return 0;
 }
