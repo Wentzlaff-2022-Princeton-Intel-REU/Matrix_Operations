@@ -19,10 +19,10 @@ void readMatrices(Matrix_t matrix_A, Matrix_t matrix_B, int m_A, int m_B, int n_
     setArray(&a, m_A, n_A);
     setArray(&b, m_B, n_B);
 
-    matrix_A.m = m;
-    matrix_B.m = m;
-    matrix_A.n = n;
-    matrix_B.n = n;
+    matrix_A.m = m_A;
+    matrix_B.m = m_B;
+    matrix_A.n = n_A;
+    matrix_B.n = n_B;
     matrix_A.elements = a;
     matrix_B.elements = b;
 }
