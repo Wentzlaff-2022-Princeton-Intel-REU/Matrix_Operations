@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <multiply.h>
+#include "multiply.h"
 
 /*--------------------------------------------------------------------*/
 
