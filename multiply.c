@@ -7,6 +7,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <multiply.h>
 
 
 Matrix_t mat_multiply (Matrix_t mat1, Matrix_t mat2){
