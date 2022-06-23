@@ -1,4 +1,5 @@
 #pragma once
+
 /*------------------------------------------------------------*/
 /* matrix.h.                                                  */
 /* Author: Manya Zhu                                          */
@@ -10,4 +11,4 @@ typedef struct Matrix {
     int m;
     int n;
     double* elements;
-} Matrix_t
+} Matrix_t;
