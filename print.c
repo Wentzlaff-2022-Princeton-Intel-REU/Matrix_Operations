@@ -13,7 +13,7 @@
 void printMatrix(Matrix_t mat) {
     int column = mat.n;
     for (int i = 0; i < mat.m; i++) {
-        printf("[");
+        printf("[ ");
         for (int j = 0; j < mat.n; j++) {
             printf("%lf ", mat.elements[i* column + j]);
         }
