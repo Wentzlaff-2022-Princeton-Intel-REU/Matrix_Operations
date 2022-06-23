@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     if (option == 0) {
         result = mat_add(matrix_A, matrix_B);
     }
-    else {
+    else if (option == 1) {
         result = mat_multiply(matrix_A, matrix_B);
     }
     
