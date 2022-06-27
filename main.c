@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 /*------------------------------------------------------------*/
-
+static void free_mat
 int main(int argc, char *argv[]) {
 
     if(argc != 6){
