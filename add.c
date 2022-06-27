@@ -12,7 +12,7 @@
 
 /*--------------------------------------------------------------------*/
 
-Matrix_t mat_add (Matrix_t mat1, Matrix_t mat2){
+Matrix_t mat_add(Matrix_t mat1, Matrix_t mat2){
     if (mat1.m != mat2.m || mat1.n != mat2.n) {
         exit(2);
     }
@@ -23,7 +23,7 @@ Matrix_t mat_add (Matrix_t mat1, Matrix_t mat2){
     Matrix_t resultingMatrix;
     resultingMatrix.m = row;
     resultingMatrix.n = column;
-    resultingMatrix.elements  = (double*) malloc (sizeof(double) * row * column);
+    resultingMatrix.elements  = (int32_t*) malloc (sizeof(int32_t) * row * column);
 
     for (int i = 0; i < row; i++){
         for (int j = 0; j < column; j++){
