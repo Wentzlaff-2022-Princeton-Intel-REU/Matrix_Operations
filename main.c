@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
     // free matrices
     free_mat(&matrix_A);
     free_mat(&matrix_B);
-    free_mat(&results);
+    free_mat(&result);
 
     return 0;
 }
