@@ -13,13 +13,8 @@
 #include "vec_multiply.h"
 #include "print.h"
 
-<<<<<<< HEAD
-/*------------------------------------------------------------*/
-static void free_mat
-=======
 /*--------------------------------------------------------------------*/
 
->>>>>>> 63e537ade06ab724481cb4d0cc5bca476b765d45
 int main(int argc, char *argv[]) {
 
     if(argc != 6){
