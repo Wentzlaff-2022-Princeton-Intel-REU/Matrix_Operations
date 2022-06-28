@@ -32,6 +32,7 @@ int main(int argc, char *argv[]) {
     readMatrices(&matrix_A, &matrix_B, m_A, m_B, n_A, n_B);
     Matrix_t result;
     
+    // not vectorized
     if (isVect == 0) {
         if (isAdd == 1) {
             result = mat_add(matrix_A, matrix_B);
@@ -42,6 +43,7 @@ int main(int argc, char *argv[]) {
             printf("A • B = \n");
         }
     }
+    // vectorized
     else if (isVect == 1) {
         if (isAdd == 1) {
             result = vec_add(matrix_A, matrix_B);
@@ -54,6 +56,7 @@ int main(int argc, char *argv[]) {
     }
     printMatrix(result);
     
+    // free matrices
     free_mat(matrix_A);
     free_mat(matrix_B);
     free_mat(results);
