@@ -10,7 +10,7 @@
 
 /*--------------------------------------------------------------------*/
 
-Matrix_t mat_multiply(Matrix_t mat1, Matrix_t mat2){
+Matrix_t mat_multiply(Matrix_t mat1, Matrix_t mat2) {
     if (mat1.n != mat2.m) {
         exit(2);
     }
@@ -24,10 +24,10 @@ Matrix_t mat_multiply(Matrix_t mat1, Matrix_t mat2){
     resultingMatrix.n = q;
     resultingMatrix.elements  = (int32_t*) malloc (sizeof(int32_t) * p * q);
 
-    for (int i = 0; i < p; i++){
-        for (int j = 0; j < q; j++){
+    for (int i = 0; i < p; i++) {
+        for (int j = 0; j < q; j++) {
             *(resultingMatrix.elements + i * q + j) = 0;
-            for (int k = 0; k < n; k++){
+            for (int k = 0; k < n; k++) {
                 *(resultingMatrix.elements + i * q + j) += *(mat1.elements + i * q + k) * *(mat2.elements + k * q + j);
             }
         }
