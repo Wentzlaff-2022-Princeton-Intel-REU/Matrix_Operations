@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------------*/
 /* multiply.c                                                         */
-/* Author: Mukund Ramakrishnan                                        */
 /*--------------------------------------------------------------------*/
 
 // The method mat_multiply multiplies two matrices.  

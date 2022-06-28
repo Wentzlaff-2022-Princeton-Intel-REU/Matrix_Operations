@@ -1,13 +1,13 @@
-/*------------------------------------------------------------*/
-/* reading.c                                                  */
-/* Author: Dara Oseyemi                                       */
-/*------------------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+/* reading.c                                                          */
+/*--------------------------------------------------------------------*/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "reading.h"
 
-/*------------------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+
 static void setArray(int32_t* array, int row, int col) {
     for (int i = 0; i < row; i++) {
             char temp;
@@ -21,6 +21,10 @@ static void setArray(int32_t* array, int row, int col) {
             exit(2);
         }
     }
+}
+
+void free_mat(Matrix_t* mat){
+    free(mat->elements);
 }
 
 void readMatrices(Matrix_t* matrix_A, Matrix_t* matrix_B, int m_A, int m_B, int n_A, int n_B) {

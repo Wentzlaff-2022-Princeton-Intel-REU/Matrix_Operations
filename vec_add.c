@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------------*/
-/* vec_add.c                                                              */
-/* Author: Manya Zhu                                       */
+/* vec_add.c                                                          */
 /*--------------------------------------------------------------------*/
 
 // The method mat_add adds two mxn arrays and returns the result in an mxn array. 
@@ -32,7 +31,7 @@ Matrix_t vec_add(Matrix_t mat1, Matrix_t mat2) {
 
     vint32m1_t va, vb, vc;
 
-    for(size_t vl; (vl = vsetvl_e32m1(avl)) > 0; avl -= vl) {
+    for (size_t vl; (vl = vsetvl_e32m1(avl)) > 0; avl -= vl) {
         va = vle32_v_i32m1(addend1, vl);
         vb = vle32_v_i32m1(addend2, vl);
         vc = vadd_vv_i32m1(va, vb, vl);
@@ -41,4 +40,6 @@ Matrix_t vec_add(Matrix_t mat1, Matrix_t mat2) {
         addend2 += vl;
         sum += vl;
     }
+
+    return resultingMatrix;
 }
