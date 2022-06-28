@@ -1,8 +1,6 @@
 #pragma once
-
 /*------------------------------------------------------------*/
-/* matrix.h.                                                  */
-/* Author: Manya Zhu                                          */
+/* matrix.h                                                   */
 /*------------------------------------------------------------*/
 
 /* A Matrix is a struct represented by a 2d array of doubles, the

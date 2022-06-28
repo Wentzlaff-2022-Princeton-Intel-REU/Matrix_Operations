@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------------*/
-/* vec_add.c                                                              */
-/* Author: Manya Zhu                                       */
+/* vec_add.c                                                          */
 /*--------------------------------------------------------------------*/
 
 // The method mat_add adds two mxn arrays and returns the result in an mxn array. 

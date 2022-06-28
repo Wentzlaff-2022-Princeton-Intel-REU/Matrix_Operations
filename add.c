@@ -1,6 +1,5 @@
 /*--------------------------------------------------------------------*/
 /* add.c                                                              */
-/* Author: Mukund Ramakrishnan                                        */
 /*--------------------------------------------------------------------*/
 
 // The method mat_add adds two mxn arrays and returns the result in an mxn array. 
