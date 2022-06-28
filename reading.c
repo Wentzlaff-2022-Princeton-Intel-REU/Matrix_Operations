@@ -23,6 +23,10 @@ static void setArray(int32_t* array, int row, int col) {
     }
 }
 
+void free_mat(Matrix_t* mat){
+    free(mat->elements);
+}
+
 void readMatrices(Matrix_t* matrix_A, Matrix_t* matrix_B, int m_A, int m_B, int n_A, int n_B) {
     int32_t* a = (int32_t*)malloc(sizeof(int32_t) * m_A * n_A);
     int32_t* b = (int32_t*)malloc(sizeof(int32_t) * m_B * n_B);

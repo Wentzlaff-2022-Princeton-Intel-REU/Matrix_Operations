@@ -23,11 +23,11 @@ Matrix_t vec_add(Matrix_t mat1, Matrix_t mat2) {
     Matrix_t resultingMatrix;
     resultingMatrix.m = row;
     resultingMatrix.n = column;
-    resultingMatrix.elements = (int*) malloc (sizeof(int) * row * column);
+    resultingMatrix.elements = (int32_t*) malloc (sizeof(int32_t) * row * column);
 
-    int* addend1 = mat1.elements;
-    int* addend2 = mat2.elements;
-    int* sum = resultingMatrix.elements;
+    int32_t* addend1 = mat1.elements;
+    int32_t* addend2 = mat2.elements;
+    int32_t* sum = resultingMatrix.elements;
 
     vint32m1_t va, vb, vc;
 
