@@ -6,6 +6,7 @@
 #include "matrix.h"
 
 /*------------------------------------------------------------*/
+
 // frees the elements in a matrix
 void free_mat(Matrix_t* mat);
 
