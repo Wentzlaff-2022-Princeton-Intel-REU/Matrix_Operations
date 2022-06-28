@@ -38,6 +38,9 @@ int main(int argc, char *argv[]) {
         printf("A • B = \n");
     }
     printMatrix(result);
+    free_mat(matrix_A);
+    free_mat(matrix_B);
+    free_mat(results);
 
     return 0;
 }
