@@ -1,6 +1,6 @@
 #pragma once
 /*------------------------------------------------------------*/
-/* vec_add.h                                                  */
+/* vec_multiply.h                                             */
 /* Author: Manya Zhu                                          */
 /*------------------------------------------------------------*/
 
@@ -8,6 +8,5 @@
 
 /*------------------------------------------------------------*/
 
-/* The add function takes in two matrices as input and returns
-a matrix that is the product of the two arguments */
+// Multiplies two matrices with vector procesing
 Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2);

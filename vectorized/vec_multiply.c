@@ -3,8 +3,6 @@
 /* Author: Dara Oseyemi                                               */
 /*--------------------------------------------------------------------*/
 
-// The method mat_multiply multiplies two matrices.  
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "vec_multiply.h"
@@ -38,21 +36,19 @@ Matrix_t mat_multiply(Matrix_t mat1, Matrix_t mat2){
     resultingMatrix.n = q;
     resultingMatrix.elements  = (int32_t*) malloc (sizeof(int32_t) * avl);
 
-    int32_t* addend1 = mat1.elements;
-    int32_t* addend2 = transpose(mat2);
-    int32_t* sum = resultingMatrix.elements;
+    vint32m1_t vb, vc;
 
-    vint32m1_t va, vb, vc;
-
-    for(size_t vl; vl = vsetvl_e32m1(avl) > 0; avl -= vl) {
-        va = vle32_v_i32m1(addend1, vl);
-        vb = vle32_v_i32m1(addend2, vl);
-        vc = vmacc_vv_i32m1(vc, va, vb, vl);
-        vse32_v_i32m1(sum, vc, vl);
-        addend1 += vl;
-        addend2 += vl;
-        sum += vl;
+    for(size_t i = 0; i < p; i++) {
+        size_t avl = q;
+        for (size_t vl; (vl = vsetvl_e32m1(avl)) > 0; avl -= vl) {
+            vc = vmv_v_x_i32m1(0, vl);
+            for (size_t j = 0; j < n; j++) {
+                vb = vle32_v_i32m1(&mat2.elements[j * q + (q - avl)], vl);
+                vc = vmacc_vx_i32m1(vc, mat1.elements[i * n + j], vb, vl);
+            }
+            vse32_v_i32m1(&resultingMatrix.elements[i * q + (q - avl)], vc, vl);
+        }
     }
-    
+
     return resultingMatrix;
 }
