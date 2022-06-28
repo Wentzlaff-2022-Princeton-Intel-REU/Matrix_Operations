@@ -8,18 +8,6 @@
 
 /*--------------------------------------------------------------------*/
 
-static int32_t* transpose(Matrix_t mat) {
-    int32_t* trans_arr = (int32_t*) malloc (sizeof(int32_t) * mat.m * mat.n);
-
-    for (int row = 0; row < mat.m; row++) {
-        for (int col = 0; col < mat.n; col++) {
-            trans_arr[col * mat.m + row] = mat.elements[row * mat.n + col];
-        }
-    }
-
-    return trans_arr;
-}
-
 Matrix_t mat_multiply(Matrix_t mat1, Matrix_t mat2){
     if (mat1.n != mat2.m) {
         exit(2);
