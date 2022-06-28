@@ -9,8 +9,7 @@
 
 /*--------------------------------------------------------------------*/
 
-Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2){
-    // check that col size of mat1 is same as row size of mat2
+Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2) {
     if (mat1.n != mat2.m) {
         exit(2);
     }
