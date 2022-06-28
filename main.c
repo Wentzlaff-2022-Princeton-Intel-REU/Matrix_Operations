@@ -2,7 +2,6 @@
 /* main.c                                                             */
 /*--------------------------------------------------------------------*/
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "matrix.h"
@@ -54,6 +53,7 @@ int main(int argc, char *argv[]) {
         }
     }
     printMatrix(result);
+    
     free_mat(matrix_A);
     free_mat(matrix_B);
     free_mat(results);

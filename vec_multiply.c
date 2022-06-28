@@ -4,6 +4,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <riscv_vector.h>
 #include "vec_multiply.h"
 
 /*--------------------------------------------------------------------*/
