@@ -29,13 +29,14 @@ int main(int argc, char *argv[]) {
     int isAdd = atoi(argv[5]);
     int isVect = atoi(argv[6]);
 
-    struct timespec tp1;
-    clock_gettime(CLOCK_MONOTONIC, &tp1);
 
     Matrix_t matrix_A, matrix_B;
     readMatrices(&matrix_A, &matrix_B, m_A, m_B, n_A, n_B);
     Matrix_t result;
-    
+
+    struct timespec tp1;
+    clock_gettime(CLOCK_MONOTONIC, &tp1);
+
     // not vectorized
     if (isVect == 0) {
         if (isAdd == 1) {
@@ -62,7 +63,7 @@ int main(int argc, char *argv[]) {
 
     struct timespec tp2;
     int time2 = clock_gettime(CLOCK_MONOTONIC, &tp2);
-    printf("\nRuntime: %d nanoseconds\n", (tp2.tv_nsec - tp1.tv_nsec));
+    printf("\nRuntime: %ld nanoseconds\n", (tp2.tv_nsec - tp1.tv_nsec));
 
     // free matrices
     free_mat(&matrix_A);
