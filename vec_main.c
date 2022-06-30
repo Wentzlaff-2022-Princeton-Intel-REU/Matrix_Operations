@@ -11,6 +11,7 @@
 #include "vec_add.h"
 #include "vec_multiply.h"
 #include "print.h"
+#include "time.h"
 
 /*--------------------------------------------------------------------*/
 
@@ -27,6 +28,9 @@ int main(int argc, char *argv[]) {
     int n_B = atoi(argv[4]);
     int isAdd = atoi(argv[5]);
     int isVect = atoi(argv[6]);
+
+    struct timespec tp1;
+    clock_gettime(CLOCK_MONOTONIC, &tp1);
 
     Matrix_t matrix_A, matrix_B;
     readMatrices(&matrix_A, &matrix_B, m_A, m_B, n_A, n_B);
@@ -55,7 +59,11 @@ int main(int argc, char *argv[]) {
         }
     }
     printMatrix(result);
-    
+
+    struct timespec tp2;
+    int time2 = clock_gettime(CLOCK_MONOTONIC, &tp2);
+    printf("\nRuntime: %d nanoseconds\n", (tp2.tv_nsec - tp1.tv_nsec));
+
     // free matrices
     free_mat(&matrix_A);
     free_mat(&matrix_B);
