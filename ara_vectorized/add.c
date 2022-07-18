@@ -21,11 +21,9 @@ Matrix_t add(Matrix_t mat1, Matrix_t mat2) {
     int column = mat1.n;
     size_t avl = row * column;
 
-    int32_t arr[row * column];
     Matrix_t resultingMatrix;
     resultingMatrix.m = row;
     resultingMatrix.n = column;
-    resultingMatrix.elements = arr;
     
     int32_t* addend1 = mat1.elements;
     int32_t* addend2 = mat2.elements;

@@ -20,10 +20,9 @@ Matrix_t multiply(Matrix_t mat1, Matrix_t mat2) {
     int q = mat2.n;
 
     Matrix_t resultingMatrix;
-    int arr[p * q];
     resultingMatrix.m = p;
     resultingMatrix.n = q;
-    resultingMatrix.elements  = arr;
+
 
     for (int i = 0; i < p; i++) {
         for (int j = 0; j < q; j++) {

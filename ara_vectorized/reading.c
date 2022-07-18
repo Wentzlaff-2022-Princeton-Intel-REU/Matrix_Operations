@@ -11,10 +11,6 @@
 
 void readMatrices(Matrix_t* matrix_A, Matrix_t* matrix_B) {
 
-    if (a == NULL || b == NULL) {
-        exit(2);
-    }
-
     matrix_A->m = 2;
     matrix_A->n = 2;
     matrix_B->m = 2;

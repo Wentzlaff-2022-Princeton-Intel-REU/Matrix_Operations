@@ -23,8 +23,6 @@ Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2) {
     Matrix_t resultingMatrix;
     resultingMatrix.m = p;
     resultingMatrix.n = q;
-    int32_t arr[p * q];
-    resultingMatrix.elements  = arr;
 
     vint32m1_t vb, vc;
     

@@ -19,11 +19,11 @@ int main(int argc, char *argv[]) {
 
     Matrix_t sum, product;
 
-    sum = ara_vec_add(matrix_A, matrix_B);
+    sum = add(matrix_A, matrix_B);
     printf("A + B = \n");
     printMatrix(sum);
 
-    product = ara_vec_multiply(matrix_A, matrix_B);
+    product = multiply(matrix_A, matrix_B);
     printf("A * B = \n");
     printMatrix(product);
 
