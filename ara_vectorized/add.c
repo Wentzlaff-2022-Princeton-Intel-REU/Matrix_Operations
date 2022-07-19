@@ -5,29 +5,25 @@
 // The method mat_add adds two mxn arrays and returns the result in an mxn array. 
 // Both arrays must be of the same dimensions.
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <riscv_vector.h>
+
 #include "add.h"
+#include "matrix.h"
+#include "printf.h"
 
 /*--------------------------------------------------------------------*/
 
-Matrix_t add(Matrix_t mat1, Matrix_t mat2) {
-    if (mat1.m != mat2.m || mat1.n != mat2.n) {
-        exit(2);
-    }
+void add(Matrix_t mat1, Matrix_t mat2, Matrix_t *resultingMatrix) {
 
     int row = mat1.m;
     int column = mat1.n;
     size_t avl = row * column;
 
-    Matrix_t resultingMatrix;
-    resultingMatrix.m = row;
-    resultingMatrix.n = column;
+    resultingMatrix->m = row;
+    resultingMatrix->n = column;
     
     int32_t* addend1 = mat1.elements;
     int32_t* addend2 = mat2.elements;
-    int32_t* sum = resultingMatrix.elements;
+    int32_t* sum = resultingMatrix->elements;
 
     vint32m1_t va, vb, vc;
 
@@ -40,6 +36,4 @@ Matrix_t add(Matrix_t mat1, Matrix_t mat2) {
         addend2 += vl;
         sum += vl;
     }
-
-    return resultingMatrix;
 }

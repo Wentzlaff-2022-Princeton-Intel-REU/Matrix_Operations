@@ -2,27 +2,22 @@
 /* multiply.c                                                         */
 /*--------------------------------------------------------------------*/
 
-#include <stdlib.h>
-#include <stdio.h>
+
 #include <riscv_vector.h>
 #include "multiply.h"
 
 /*--------------------------------------------------------------------*/
 
-Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2) {
-    if (mat1.n != mat2.m) {
-        exit(2);
-    }
+void vec_multiply(Matrix_t mat1, Matrix_t mat2, Matrix_t* resultingMatrix) {
 
     // p = mat1 row size, n = mat1 col and mat2 row size, q = mat2 col size
     int p = mat1.m;
     int n = mat1.n;
     int q = mat2.n;
 
-    // init result matrix, malloc the elements 
-    Matrix_t resultingMatrix;
-    resultingMatrix.m = p;
-    resultingMatrix.n = q;
+    // init result matrix
+    resultingMatrix->m = p;
+    resultingMatrix->n = q;
 
     vint32m1_t vb, vc;
     
@@ -43,9 +38,7 @@ Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2) {
             }
             // once the whole row of mat1 has been iterated through, save the
             // vc register to the correct location in memory at resultingMatrix
-            vse32_v_i32m1(&resultingMatrix.elements[i * q + (q - avl)], vc, vl);
+            vse32_v_i32m1(arresultingMatrix->elements[i * q + (q - avl)], vc, vl);
         }
     }
-
-    return resultingMatrix;
 }

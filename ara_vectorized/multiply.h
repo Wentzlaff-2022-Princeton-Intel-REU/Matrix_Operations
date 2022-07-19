@@ -8,4 +8,4 @@
 /*------------------------------------------------------------*/
 
 // Multiplies two matrices with vector procesing
-Matrix_t multiply(Matrix_t mat1, Matrix_t mat2);
+void multiply(Matrix_t mat1, Matrix_t mat2, Matrix_t* resultingMatrix);
