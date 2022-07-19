@@ -10,9 +10,6 @@
 /*--------------------------------------------------------------------*/
 
 Matrix_t multiply(Matrix_t mat1, Matrix_t mat2) {
-    if (mat1.n != mat2.m) {
-        exit(2);
-    }
 
     int p = mat1.m;
     int n = mat1.n;
