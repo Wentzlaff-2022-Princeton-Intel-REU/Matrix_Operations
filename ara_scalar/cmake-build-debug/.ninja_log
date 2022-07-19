@@ -48,3 +48,17 @@
 26	49	1658180436703692028	matrix_operations	369565d795e98e7f
 2	26	1658180460458952218	CMakeFiles/matrix_operations.dir/main.c.o	edba93bf29ac1abd
 26	49	1658180460481952470	matrix_operations	369565d795e98e7f
+3	96	1658254064162235023	CMakeFiles/matrix_operations.dir/reading.c.o	84240628c266279
+3	140	1658254064163235034	CMakeFiles/matrix_operations.dir/main.c.o	edba93bf29ac1abd
+3	140	1658254064163235034	CMakeFiles/matrix_operations.dir/add.c.o	9e42dd9231701fb
+3	141	1658254064162235023	CMakeFiles/matrix_operations.dir/multiply.c.o	57f1f7ea35072ea8
+3	141	1658254064163235034	CMakeFiles/matrix_operations.dir/print.c.o	abd149427986bdff
+141	182	1658254064247235947	matrix_operations	369565d795e98e7f
+2	22	1658254245826209660	CMakeFiles/matrix_operations.dir/reading.c.o	84240628c266279
+2	22	1658254245827209671	CMakeFiles/matrix_operations.dir/add.c.o	9e42dd9231701fb
+2	23	1658254245827209671	CMakeFiles/matrix_operations.dir/multiply.c.o	57f1f7ea35072ea8
+2	23	1658254245828209682	CMakeFiles/matrix_operations.dir/main.c.o	edba93bf29ac1abd
+23	44	1658254245849209910	matrix_operations	369565d795e98e7f
+1	59	1658254326660087410	CMakeFiles/matrix_operations.dir/main.c.o	edba93bf29ac1abd
+1	60	1658254326661087421	CMakeFiles/matrix_operations.dir/print.c.o	abd149427986bdff
+60	89	1658254326691087746	matrix_operations	369565d795e98e7f
