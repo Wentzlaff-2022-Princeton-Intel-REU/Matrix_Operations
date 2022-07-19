@@ -1,3 +1,0 @@
-/home/manyaz/Projects/Matrix_Operations/ara_scalar/cmake-build-debug/CMakeFiles/matrix_operations.dir
-/home/manyaz/Projects/Matrix_Operations/ara_scalar/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/manyaz/Projects/Matrix_Operations/ara_scalar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
