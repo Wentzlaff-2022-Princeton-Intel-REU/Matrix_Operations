@@ -1,15 +1,15 @@
 /*--------------------------------------------------------------------*/
-/* vec_multiply.c                                                     */
+/* multiply.c                                                         */
 /*--------------------------------------------------------------------*/
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <riscv_vector.h>
-#include "vec_multiply.h"
+#include "multiply.h"
 
 /*--------------------------------------------------------------------*/
 
-Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2) {
+Matrix_t multiply(Matrix_t mat1, Matrix_t mat2) {
     if (mat1.n != mat2.m) {
         exit(2);
     }

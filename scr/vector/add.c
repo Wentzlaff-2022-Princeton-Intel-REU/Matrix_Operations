@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------*/
-/* vec_add.c                                                          */
+/* add.c                                                              */
 /*--------------------------------------------------------------------*/
 
 // The method mat_add adds two mxn arrays and returns the result in an mxn array. 
@@ -8,11 +8,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <riscv_vector.h>
-#include "vec_add.h"
+#include "add.h"
 
 /*--------------------------------------------------------------------*/
 
-Matrix_t vec_add(Matrix_t mat1, Matrix_t mat2) {
+Matrix_t add(Matrix_t mat1, Matrix_t mat2) {
     if (mat1.m != mat2.m || mat1.n != mat2.n) {
         exit(2);
     }

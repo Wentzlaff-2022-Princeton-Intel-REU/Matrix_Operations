@@ -4,11 +4,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "matrix.h"
-#include "reading.h"
+#include <time.h>
 #include "add.h"
 #include "multiply.h"
 #include "print.h"
+#include "reading.h"
 
 /*--------------------------------------------------------------------*/
 
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: %s 5 values needed\n", argv[0]);
         exit(EXIT_FAILURE);
     }
-    
+
     int m_A = atoi(argv[1]);
     int n_A = atoi(argv[2]);
     int m_B = atoi(argv[3]);
@@ -28,17 +28,24 @@ int main(int argc, char *argv[]) {
     Matrix_t matrix_A, matrix_B;
     readMatrices(&matrix_A, &matrix_B, m_A, m_B, n_A, n_B);
     Matrix_t result;
-    
+
+    struct timespec tp1;
+    clock_gettime(CLOCK_MONOTONIC, &tp1);
+
     if (isAdd == 1) {
-        result = mat_add(matrix_A, matrix_B);
-        printf("A + B = \n");
+        result = add(matrix_A, matrix_B);
+        printf("\nA + B = \n");
     }
     else if (isAdd == 0) {
-        result = mat_multiply(matrix_A, matrix_B);
-        printf("A • B = \n");
+        result = multiply(matrix_A, matrix_B);
+        printf("\nA • B = \n");
     }
     printMatrix(result);
-    
+
+    struct timespec tp2;
+    int time2 = clock_gettime(CLOCK_MONOTONIC, &tp2);
+    printf("\nRuntime: %ld nanoseconds\n", (tp2.tv_nsec - tp1.tv_nsec));
+
     // free matrices
     free_mat(&matrix_A);
     free_mat(&matrix_B);

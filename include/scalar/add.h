@@ -1,11 +1,12 @@
 #pragma once
 /*------------------------------------------------------------*/
-/* vec_multiply.h                                             */
+/* add.h.                                                     */
 /*------------------------------------------------------------*/
 
 #include "matrix.h"
 
 /*------------------------------------------------------------*/
 
-// Multiplies two matrices with vector procesing
-Matrix_t vec_multiply(Matrix_t mat1, Matrix_t mat2);
+/* The add function takes in two matrices as input and returns
+a matrix that is the sum of the two arguments */
+Matrix_t add(Matrix_t mat1, Matrix_t mat2);
