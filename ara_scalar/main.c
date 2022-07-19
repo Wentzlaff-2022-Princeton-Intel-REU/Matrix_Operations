@@ -2,8 +2,7 @@
 /* main.c                                                             */
 /*--------------------------------------------------------------------*/
 
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "matrix.h"
 #include "reading.h"
 #include "add.h"

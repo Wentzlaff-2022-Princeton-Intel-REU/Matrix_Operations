@@ -4,8 +4,7 @@
 
 // The method mat_multiply multiplies two matrices.  
 
-#include <stdlib.h>
-#include <stdio.h>
+
 #include "multiply.h"
 
 /*--------------------------------------------------------------------*/

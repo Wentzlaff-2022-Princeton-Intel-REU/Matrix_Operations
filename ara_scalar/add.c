@@ -5,8 +5,7 @@
 // The method mat_add adds two mxn arrays and returns the result in an mxn array. 
 // Both arrays must be of the same dimensions.
 
-#include <stdlib.h>
-#include <stdio.h>
+
 #include "add.h"
 
 /*--------------------------------------------------------------------*/
